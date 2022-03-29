@@ -1,11 +1,11 @@
-const { searchModemId, $t } = require('../utils');
+const { searchModemId, searchSmsId, $t } = require('../utils');
 
-describe('searchModem', () => {
+describe('searchModemId', () => {
   it('Should return a number when there is some modem', () => {
-    const idModem = '1';
-    const text = `/org/freedesktop/ModemManager1/Modem/${idModem} [ZTE CORPORATION] MF190`;
+    const modemId = '1';
+    const text = `/org/freedesktop/ModemManager1/Modem/${modemId} [ZTE CORPORATION] MF190`;
     const result = searchModemId(text);
-    expect(idModem).toEqual(result);
+    expect(modemId).toEqual(result);
   });
 
   it('Should return null when there are modems', () => {
@@ -17,6 +17,28 @@ describe('searchModem', () => {
   it('Should return null when the input argument is falsy', () => {
     const text = null;
     const result = searchModemId(text);
+    expect(result).toBeNull();
+  });
+});
+
+
+describe('searchSmsId', () => {
+  it('Should return a number when there is some sms created', () => {
+    const smsId = '1';
+    const text = `Successfully created new SMS: /org/freedesktop/ModemManager1/SMS/${smsId}`;
+    const result = searchSmsId(text);
+    expect(smsId).toEqual(result);
+  });
+
+  it('Should return null when there are modems', () => {
+    const text = `error: couldn't find modem`;
+    const result = searchSmsId(text);
+    expect(result).toBeNull();
+  });
+  
+  it('Should return null when the input argument is falsy', () => {
+    const text = null;
+    const result = searchSmsId(text);
     expect(result).toBeNull();
   });
 });
