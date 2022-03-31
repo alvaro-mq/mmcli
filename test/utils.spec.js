@@ -1,4 +1,4 @@
-const { searchModemId, searchSmsId, $t } = require('../utils');
+const { searchModemId, searchSmsId, $t } = require('../lib/utils');
 
 describe('searchModemId', () => {
   it('Should return a number when there is some modem', () => {
