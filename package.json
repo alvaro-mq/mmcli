@@ -1,21 +1,21 @@
 {
   "name": "modem-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "package for mmcli modemmanager",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint ."
   },
-  "homepage": "https://github.com/alvaro-mq/mmcli#README",
+  "homepage": "https://github.com/alvaro-mq/modem-manager#README",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alvaro-mq/mmcli.git"
+    "url": "git+https://github.com/alvaro-mq/modem-manager.git"
   },
   "author": "Alvaro MQ <alvaro.mamani.qp@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alvaro-mq/mmcli/issues"
+    "url": "https://github.com/alvaro-mq/modem-manager/issues"
   },
   "dependencies": {
     "debug": "^4.3.4"
