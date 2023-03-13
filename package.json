@@ -1,6 +1,6 @@
 {
   "name": "modem-manager",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "package for mmcli modemmanager",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,8 @@
     "url": "https://github.com/alvaro-mq/modem-manager/issues"
   },
   "dependencies": {
-    "debug": "^4.3.4"
+    "debug": "^4.3.4",
+    "dataobject-parser": "^1.2.22"
   },
   "keywords": [
     "modem",
@@ -28,7 +29,7 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "jest": "^27.5.1"
